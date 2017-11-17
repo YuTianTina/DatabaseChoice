@@ -1,11 +1,13 @@
-package com.study.databasechoose;
+package com.study.databasechoose.utils;
+
+import com.study.databasechoose.User;
 
 import java.util.List;
 
 /**
  * 2017/11/17
  * e-mail: yutt@xinguangnet.com
- * Description:
+ * Description: 用户数据操作接口
  *
  * @author yutt
  */
