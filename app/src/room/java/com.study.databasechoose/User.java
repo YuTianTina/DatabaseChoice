@@ -3,6 +3,7 @@ package com.study.databasechoose;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
 import java.util.UUID;
 
@@ -15,8 +16,10 @@ import java.util.UUID;
  */
 @Entity(tableName = "user")
 public class User {
+    @Ignore
     private long id;
     @PrimaryKey
+    @NonNull
     private String userId;
     private String userName;
     private int userAge;
@@ -24,8 +27,6 @@ public class User {
     private String remark;
 
 
-    public User() {
-    }
 
     public User(String userName, int userAge) {
         this.userId = UUID.randomUUID().toString();

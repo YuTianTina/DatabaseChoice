@@ -9,10 +9,15 @@ package com.study.databasechoose;
  */
 
 public class App extends BaseApp {
-
+    private UserDatabase database;
     @Override
     public void onCreate() {
         super.onCreate();
+
+        database = UserDatabase.getInstance(this);
     }
 
+    public UserDatabase getDatabase() {
+        return database;
+    }
 }

@@ -1,6 +1,7 @@
 package com.study.databasechoose;
 
 import com.study.databasechoose.utils.IDbOperation;
+import com.study.databasechoose.utils.Utils;
 
 import java.util.List;
 
@@ -11,28 +12,15 @@ import java.util.List;
  *
  * @author yutt
  */
+public class DbOperation implements IDbOperation{
 
-public class DbOperation implements IDbOperation {
-
-    public DbOperation() {
-
-    }
-
-    /**
-     * 新增用户
-     * @param user
-     */
     @Override
-    public void addUser(User user){
-
+    public void addUser(User user) {
+        ((App)Utils.getApp()).getDatabase().dbDao().addUser(user);
     }
 
-    /**
-     * 查询所有用户数据
-     * @return
-     */
     @Override
     public List<User> queryUser() {
-        return null;
+        return ((App)Utils.getApp()).getDatabase().dbDao().queryUser();
     }
 }
