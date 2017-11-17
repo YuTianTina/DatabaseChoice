@@ -41,6 +41,10 @@ dependencies {
 
     debugImplementation deps.objectbox.browser
 
+    implementation deps.room.runtime
+    annotationProcessor deps.room.compiler
+    androidTestImplementation deps.room.testing
+
 }
 
 apply plugin: 'io.objectbox'

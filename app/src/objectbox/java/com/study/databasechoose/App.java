@@ -1,9 +1,5 @@
 package com.study.databasechoose;
 
-import android.app.Application;
-
-import com.study.databasechoose.utils.Utils;
-
 import io.objectbox.BoxStore;
 
 /**
@@ -14,13 +10,12 @@ import io.objectbox.BoxStore;
  * @author yutt
  */
 
-public class App extends Application {
+public class App extends BaseApp {
     private BoxStore boxStore;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        Utils.init(this);
         initBox();
     }
 
