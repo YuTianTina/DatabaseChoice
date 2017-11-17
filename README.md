@@ -5,4 +5,4 @@ Room和ObjectBox的使用Demo
 
 
 
-[1]:/forObjectBox.md
+[1]:https://github.com/YuTianTina/DatabaseChoice/blob/master/forObjectBox.md
